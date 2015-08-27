@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="128dp"
+    		android:layout_height="128dp"
+    		android:layout_below="@id/homep_title"
+    		android:layout_marginTop="40dp"
+    		android:layout_centerHorizontal="true"
+    		android:gravity="center"
+    		android:src="@drawable/qing01"
+        />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/weatherIcon"
+        android:gravity="center"
+        android:text="0.0"
+        android:textColor="#fff"
+        android:textSize="80sp" />
+
+    <LinearLayout
+        android:id="@+id/homep_nowinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/currentcity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:focusable="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pm25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pollution_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/today_date_dec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/homep_nowinfo"
+		android:layout_marginTop="5dp"
+		android:textColor="#fff"
+		android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/search_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/today_date_dec"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp" >
+
+        <EditText
+            android:id="@+id/inputcity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/pleaseinput"
+            android:maxLength="10"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/sendcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:gravity="center"
+            android:text="@string/search" />
+    </LinearLayout>
+
+    
+    
+
+</RelativeLayout>
